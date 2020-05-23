@@ -49,7 +49,7 @@ Firefox doesn't have a built-in export function for passwords and the password e
 
 ## Exporting passwords from Firefox
 
-You can use the internal console to achieve this task. I follow & summarize the guide by cor-el (again!) from the [Mozilla Support Forum](https://support.mozilla.org/de/questions/1077630#answer-834769), the code below is his (under CC-BY-SA).
+You can use the internal console to achieve this task. I follow & summarize the guide by cor-el (again!) from the [Mozilla Support Forum](https://support.mozilla.org/de/questions/1077630#answer-834769), the code below is theirs (licensed under CC-BY-SA).
 
 Set `devtools.chrome.enabled` to `true` in `about:config` and open the console ("Browser Konsole" in German) via 3-bar menu -> Web Developer (or Ctrl+Shift+J). Then paste the following javascript code (I advise you to read all code that you paste into your browser, especially if it is concerning passwords):
 
