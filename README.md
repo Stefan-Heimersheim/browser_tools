@@ -22,13 +22,13 @@ You can use a normal sqlite program (e.g. `sqlite3` under Linux) or the sqlite-m
 
 ### Chromium / Chrome
 
-For Chromium I used these SQL commands, courtesy of Traveling Tech Guy on [superuser](https://superuser.com/questions/602252/can-chrome-browser-history-be-exported-to-an-html-file) (CC-BY-SA) to extract the history. I used the `sqlite3` program on Linux to access the database:
+For Chromium I used these SQL commands, written by [Yuji Tomita](https://yuji.wordpress.com/2014/03/10/export-chrome-history-as-csv-spreadsheet/) and found on [superuser](https://superuser.com/questions/602252/can-chrome-browser-history-be-exported-to-an-html-file) (Traveling Tech Guy, CC-BY-SA) to extract the history. I used the `sqlite3` program on Linux to access the database:
 
     $ sqlite3 History
     sqlite> .headers on
     sqlite> .mode csv
     sqlite> .output my-history.csv
-    sqlite> SELECT datetime(last_visit_time/1000000-19644473600,'unixepoch','localtime'), url FROM urls ORDER BY last_visit_time DESC
+    sqlite> SELECT datetime(last_visit_time/1000000-11644473600,'unixepoch','localtime'), url FROM urls ORDER BY last_visit_time DESC
 
 The output of these commands will be saved in `my-history.csv`.
 
